@@ -16,7 +16,6 @@ public class PageBase extends ReadProperties {
     public static String Execution = "";
 
     private static final ThreadLocal<AppiumDriver> driver = new ThreadLocal<>();
-    private static  DesiredCapabilities capabilities;
 
     private static final String SAUCELABS_USERNAME = getProperty("slabs.username");
     private static final String SAUCELABS_ACCESS_KEY = getProperty("slabs.accesskey");
@@ -59,7 +58,7 @@ public class PageBase extends ReadProperties {
 //    }
 
     public static DesiredCapabilities getBrowserStackOptionsBasedOnPlatform(String testName, String buildName, String className, String platform) {
-        capabilities = new DesiredCapabilities();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
         HashMap<String, Object> bstackOptions = new HashMap<String, Object>();
         bstackOptions.put("userName", BROWSERSTACK_USERNAME);
         bstackOptions.put("accessKey", BROWSERSTACK_ACCESS_KEY);
@@ -88,7 +87,7 @@ public class PageBase extends ReadProperties {
     }
 
     public static DesiredCapabilities getSauceLabsOptionsBasedOnPlatform(String testName, String buildName, String className, String platform) {
-        capabilities = new DesiredCapabilities();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
         HashMap<String, Object> options = new HashMap<>();
         options.put("username", SAUCELABS_USERNAME);
         options.put("accessKey", SAUCELABS_ACCESS_KEY);
