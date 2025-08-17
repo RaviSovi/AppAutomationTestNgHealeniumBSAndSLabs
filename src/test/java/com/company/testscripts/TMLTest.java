@@ -1,4 +1,4 @@
-package com.project.testscripts;
+package com.company.testscripts;
 
 import com.project.base.DriverFactory;
 import com.project.config.ER;
