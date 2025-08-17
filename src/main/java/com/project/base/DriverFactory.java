@@ -2,9 +2,6 @@ package com.project.base;
 
 import com.epam.healenium.SelfHealingDriver;
 import io.appium.java_client.AppiumDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;

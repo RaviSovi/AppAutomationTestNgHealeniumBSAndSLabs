@@ -1,13 +1,12 @@
 package com.project.base;
 
 import com.project.config.ReadProperties;
+import com.project.utilities.TestDataLoader;
 import io.appium.java_client.AppiumDriver;
 import org.json.JSONObject;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
+import org.testng.annotations.BeforeSuite;
 
 import java.util.HashMap;
 
@@ -160,5 +159,10 @@ public class PageBase extends ReadProperties {
 
     public static boolean isHealeniumEnabled() throws Exception {
         return Boolean.parseBoolean(DrivergetProperty("use.healenium"));
+    }
+
+    @BeforeSuite(alwaysRun = true)
+    public void loadTestData() {
+        TestDataLoader.loadAllExcelData("src\\test\\resources\\AppAutomation\\TestData\\");
     }
 }

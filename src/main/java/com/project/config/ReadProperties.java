@@ -16,7 +16,7 @@ public class ReadProperties {
         if (pro == null) {
             pro = new Properties();
 
-            f = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\WebAutomation\\TestData\\");
+            f = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\AppAutomation\\PropertyFiles\\");
             System.out.println("**** Web Automation locator file executed.");
             File[] file = f.listFiles();
             for (int i = 0; i < file.length; i++) {
